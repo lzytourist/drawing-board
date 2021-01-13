@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Draw Your Thought!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="board">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="tools">
+        <div class="tool color" onclick="changeColor(this)" style="background-color: black"></div>
+        <div class="tool color" onclick="changeColor(this)" style="background-color: red"></div>
+        <div class="tool color" onclick="changeColor(this)" style="background-color: yellow"></div>
+        <input type="color" oninput="color = this.value" value="#112ae4" class="tool color-input">
+        <input type="range" oninput="pencil = this.value" min="2" max="20" value="2" class="tool">
+        <div class="divider"></div>
+        <button type="button" class="tool btn btn-clear" onclick="clearBoard()">Clear</button>
+        <button type="button" class="tool btn btn-undo" onclick="undoBoard()">Undo</button>
+        <a class="tool btn btn-save" id="save">Save</a>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
